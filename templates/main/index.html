@@ -1,0 +1,421 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+
+<!-- Landing page -->
+<div class="row landing">
+  <div id="carouselExampleFade" class="carousel slide carousel-fade p-0" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      {% for carousel in Carousels|slice:":4" %}
+      {% if forloop.first %}
+      <div class="carousel-item active p-0" data-bs-interval="4000">
+      {% else %}
+      <div class="carousel-item" data-bs-interval="4000">
+      {% endif %}
+        <img src="/media/{{carousel.image}}" class="d-block w-100 xx" alt="Bedeman Picture" style="height: 600px;filter: brightness(40%);">
+        <div class="carousel-caption" style="top: 35%;">
+          <h1 class="text-center animate__animated animate__bounceInLeft animate__delay-3s">{{carousel.caption}}</h1>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<!-- LAnding End -->
+<!-- First Section -->
+<a id="whymepage" class="mb-3 p-5"></a>
+<div class="row my-5 p-5" >
+  <div class="col-lg-6 col-md-6 col-sm-12">
+    <h1 class="text-sm-center text-lg-start" style="color: #2b2e4a;text-align: left;">OFFERING THE RIGHT SOLUTION TO THE WORLD</h1>
+    <ol class="my-4 serviceList">
+      <li>Uniqueness in Creativity</li>
+      <li>Futuristic Innovations</li>
+      <li>Sustainable Solutions</li>
+    </ol>
+   <button class="btn  mx-2 mx-sm-auto px-5 contactBtn my-2" id="">
+     <a  href="#contactpage">Get in Touch →</a>
+   </button> 
+   <button class="btn mx-2 mx-sm-auto px-5 projectBtn my-3" id="">
+    <a  href="#portfoliopage">View Projects →</a>
+   </button>
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-around align-items-center">
+    <h3 class="ml5">
+      <span class="text-wrapper1">
+        <span class="line line1"></span>
+        <span class="letters1 letters-left"> BEDEMAN</span>
+        <span class="line line2"></span>
+      </span>
+    </h3>
+  </div>
+</div>
+<!-- First Section End -->
+
+<!-- profile section start -->
+<a id="profilepage" class="mb-3 p-5"></a>
+<div class="row profile-page mx-auto bg-light p-5" style="width: 80%;box-shadow: -4px 8px 12px 0px #2b2e4a;">
+  <!-- display photo -->
+  <div class="col-lg-6 col-md-6 col-sm-12">
+    <div class="row">
+
+      <div class="col-lg-6 col-md-12 col-sm-12">
+        <img src="{% static 'pics/dp.jpg' %}" class="img-thumbnail d-block mx-auto" alt="PROFILE PICTURE">
+      </div>
+
+      <div class="col-lg-6 col-md-12 col-sm-12 py-2 px-3">
+        <h6> <b>Name: <br> </b> Hampo Echezonachukwu Bede</h6>
+        <h6><b>Profession: <br></b> Software Developer (Django) <br> Architect</h6>
+        <h6><b>Qualification: <br></b> Bsc. Architecture <br> Certified Proficeiency in Information Mangement</h6>
+        <div class="my-5">
+          <!-- Button trigger modal -->
+             <button type="button" class="btn mx-2 px-5 contactBtn my-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              CV
+             </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog  modal-dialog-scrollable"">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="width: auto;">
+                      {% for cv in cvs %}
+                      <img src="/media/{{cv.file}}" class="img-fluid d-block mx-auto" alt="">
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+      </div>
+      
+    </div>
+    <div class="col-12">
+      
+      
+    </div>
+  </div>
+  <!-- display photo end -->
+  <!-- description and skills start -->
+  <div class="col-lg-6 col-md-6 col-sm-12">
+    <h3 class="py-2">Skills</h3>
+    <div class="row">
+      <div class="col-lg-6 col-sm-12 my-2">
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">HTML & CSS</div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-sm-12 my-2">
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">Bootstrap</div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-sm-12 my-2">
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 60%">Javascript</div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-sm-12 my-2">
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 60%">Jquery</div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-sm-12 my-2">
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">AutoCAD</div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-sm-12 my-2">
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 40%">3D MAX</div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-sm-12 my-2">
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 40%">Angular</div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-sm-12 my-2">
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 40%">OOP</div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-sm-12 my-2">
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 40%">Python</div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-sm-12 my-2">
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 20%">Dart</div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-sm-12 my-2">
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 60%">C & C++</div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-sm-12 my-2">
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 30%">Java</div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-sm-12 my-2">
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">Figma</div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-sm-12 my-2">
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">Adobe XD</div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-sm-12 my-2">
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">Microsoft Office</div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+  <!-- description and skills end -->
+</div>
+
+<!-- profile section end -->
+
+
+<!-- second section -->
+<a id="servicepage" class="mb-3 p-5"></a>
+<div class="row servicePage mt-5 p-5"  style="background-color: #cfd2ec !important;">
+
+  <div class="col-1g-8 col-md-8 col-sm-12">
+
+    <div class="row">
+<!-- Service title -->
+      <div class="col-12">
+        <h1 class="ml6 text-center">
+          <span class="text-wrapper">
+            <span class="letters">SPECIALIZATION</span>
+          </span>
+        </h1>
+        <p class="text-center" style="font-size: large;">Everything Services comes with a touch of professionalism, passion and quality.</p>
+      </div>
+      <!-- service title end -->
+
+      <!-- service pic -->
+      <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+        <a href="http://"></a>
+        <div class="div pic-frame p-4 mx-auto">
+          <img class="img-fluid" src="{% static 'pics/arc.png' %}" width="100" alt="">
+        </div>
+        <h6 class="text-center my-2" style="color: #2b2e4a;">Architecture</h6>
+      </a>
+      </div>
+     <!-- servicepic end -->
+
+     <!-- service pic -->
+     <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+      <a href="http://"></a>
+      <div class="div pic-frame p-4 mx-auto">
+        <img class="img-fluid" src="{% static 'pics/web.png' %}" width="100" alt="">
+      </div>
+      <h6 class="text-center my-2" style="color: #2b2e4a;">Software Development</h6>
+    </a>
+    </div>
+   <!-- servicepic end -->
+
+   <!-- service pic -->
+   <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+    <a href="http://"></a>
+    <div class="div pic-frame p-4 mx-auto">
+      <img class="img-fluid" src="{% static 'pics/app.png' %}" width="100" alt="">
+    </div>
+    <h6 class="text-center my-2" style="color: #2b2e4a;">App Development</h6>
+  </a>
+  </div>
+ <!-- servicepic end -->
+
+ <!-- service pic -->
+ <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+  <a href="http://"></a>
+  <div class="div pic-frame p-4 mx-auto">
+    <img class="img-fluid" src="{% static 'pics/bis.png' %}" width="100" alt="">
+  </div>
+  <h6 class="text-center my-2" style="color: #2b2e4a;">Business Strategist</h6>
+</a>
+</div>
+<!-- servicepic end -->
+
+      <!-- servicepic end -->
+
+    </div>
+
+  </div>
+  
+
+ <div class="col-1g-4 col-md-4 col-sm-12 d-flex align-items-center">
+   <div class="">
+    <img class="img-thumbnail d-block mx-auto my-auto" src="{% static 'pics/banner1.jpg' %}" alt="">
+   </div>
+ </div>
+   
+   
+  </div>
+<!-- second section end -->
+
+<!-- portfolio -->
+<a id="portfoliopage" class="mb-3 p-5"></a>
+<div class="row p-5 bg-light" style="margin-bottom: 8% !important;">
+  <!-- start -->
+   <div class="col-12 bg-light">
+     <div class="row">
+       <!-- control -->
+       <div class="col-12 bg-light d-flex justify-content-end align-items-center">
+         <a class="mx-2 px-4 py-2" id="portfolio-arc-btn">Arch</a>
+         <a class="mx-2 px-4 py-2" id="portfolio-tech-btn">Tech</a>
+         <a class="mx-2 px-4 py-2" id="portfolio-bis-btn">Biz</a>
+       </div>
+       <!-- control end -->
+       <!-- architecture works -->
+       <div class="col-12   portfolio-section" id="portfolio-arc">
+         <div class="row">
+          
+           <!-- item-col -->
+           <div class="col-12 p-3 d-flex align-items-center  portfolio-item">
+
+             <!-- item -->
+             {% for project in archprojects %}
+             <a href="{{project.urlPath}}" target="_blank" class="d-block mx-auto my-2 p-1"> 
+              <div class="card" style="width: 20rem; height: 450px;">
+                <img src="{{project.image.url}}" class="card-img-top img-fluid" alt="Architecture" style="height: 300px;width: 300px;">
+                <div class="card-body">
+                  <h6 class="card-text text-center my-2" style="color: #2b2e4a;">
+                    {{project.title}} 
+                  </h6>
+                  <a href="{{project.urlPath}}" target="_blank" class="d-block mx-auto " >
+                    <i class="fa fa-eye " aria-hidden="true" style="color: #2b2e4a;"
+                    ></i>
+                  </a>
+                </div>
+              </div>
+             </a>
+             {% endfor %}
+             <!-- item end -->
+           </div>
+           <!-- item-col end -->
+         </div>
+       </div>
+       <!-- architecture work end -->
+
+       
+       <!-- technology works -->
+       <div class="col-12 bg-light portfolio-section" id="portfolio-tech">
+        <div class="row">
+         
+          <!-- item-col -->
+          <div class="col-12 p-3 d-flex align-items-center  portfolio-item">
+                <!-- item -->
+             {% for project in techprojects %}
+             <a href="{{project.urlPath}}" target="_blank" class="d-block mx-auto my-2 p-1">
+              <div class="card" style="width: 25rem; height: 450px;">
+                <img src="{{project.image.url}}" class="card-img-top img-fluid" alt="Softwares" style="height: 300px;width: 400px;">
+                <div class="card-body">
+                  <h6 class="card-text text-center my-2" style="color: #2b2e4a;">
+                    {{project.title}} 
+                  </h6>
+                  <a href="{{project.urlPath}}" target="_blank" class="d-block mx-auto " >
+                    <i class="fa fa-eye " aria-hidden="true" style="color: #2b2e4a;"
+                    ></i>
+                  </a>
+                </div>
+              </div>
+             </a>
+             {% endfor %}
+             <!-- item end -->
+                 
+          </div>
+          <!-- item-col end -->
+        
+        </div>
+      </div>
+      <!-- technology work end -->
+
+      
+       <!-- business works -->
+       <div class="col-12 bg-light  portfolio-section" id="portfolio-bis">
+        <div class="row">
+         
+          <!-- item-col -->
+          <div class="col-12 p-3 d-flex align-items-center  portfolio-item">
+               <!-- item -->
+             {% for project in bisprojects %}
+             <a href="{{project.urlPath}}" target="_blank" class="d-block mx-auto my-2 p-1">
+              <div class="card" style="width: 20rem; height: 450px;">
+                <img src="{{project.image.url}}" class="card-img-top img-fluid" alt="Architecture" style="height: 300px;width: 300px;">
+                <div class="card-body">
+                  <h6 class="card-text text-center my-2" style="color: #2b2e4a;">
+                    {{project.title}} 
+                  </h6>
+                  <a href="{{project.urlPath}}" target="_blank" class="d-block mx-auto " >
+                    <i class="fa fa-eye " aria-hidden="true" style="color: #2b2e4a;"
+                    ></i>
+                  </a>
+                </div>
+              </div>
+             </a>
+             {% endfor %}
+             <!-- item end -->
+          </div>
+          <!-- item-col end -->
+        </div>
+      </div>
+      <!-- business work end -->
+
+      
+
+     </div>
+   </div>
+  <!-- end -->
+</div>
+<!-- portfolio end -->
+
+<!-- client section -->
+<!-- <div class="row clients">
+  <div class="col-12">
+    <h3 class="p-3">Our Clients</h3>
+  </div>
+  <div class="col-12 p-5">
+    <marquee width="100%" direction="left" height="200px">
+      <img class="img-fluid" src="{% static 'pics/arc3.jpg' %}" alt="">
+      <img class="img-fluid" src="{% static 'pics/arc3.jpg' %}" alt="">
+    </marquee>
+  </div>
+</div> -->
+<!-- client section end -->
+
+
+
+
+
+
+{% endblock %}

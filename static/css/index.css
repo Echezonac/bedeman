@@ -1,0 +1,164 @@
+/* =========================
+        General Styling 
+==========================*/
+ *{
+     padding: 0px;
+     margin: 0px;
+     text-decoration: none;
+     outline: none;
+     user-select: none;
+ }
+ p{
+  font-family: 'Caveat', cursive;
+  
+  
+ }
+
+ h1,h2,h3{
+  font-family: 'Girassol', cursive;
+  color: #2b2e4a !important;
+  text-align: center;
+ }
+/* =========================
+        Header Styling 
+==========================*/
+ .header{
+     background-color: white; 
+ }
+ .navbar-toggler{
+     border: none !important;
+     outline:none !important;
+ }
+ .navbar-toggler-icon{
+     color:#2b2e4a !important;
+     font-weight: bold !important;
+ }
+ .nav-link{
+     font-family: 'Zilla Slab', serif;
+     font-size: medium;
+     color: #2b2e4a;
+     font-weight: bold;
+ }
+/* =========================
+        Landing Styling 
+==========================*/
+ /* .carousel-item:after {
+   content:"";
+   display:block;
+   position:absolute;
+   top:0;
+   bottom:0;
+   left:0;
+   right:0;
+   background:rgba(0,0,0,0.3);
+ } */
+ .xx{
+   filter: brightness(40%);
+ }
+ .carousel-caption{
+   margin-bottom: 60px;
+ }
+ .carousel-caption h1{
+   color: white !important;
+   font-weight: bold;
+   text-shadow: 5px 5px 5px black;
+   font-size: 50px;
+   transform: cubic-bezier(.17,.67,.92,.28);
+ }
+ 
+ .icon-box .fa{
+  color:white !important;
+ }
+ 
+/* =========================
+        first Section 
+==========================*/
+.contactBtn{
+  background-color: #2b2e4a !important;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+.contactBtn:hover{
+  border: 2px solid #2b2e4a;
+  background-color: white !important;
+  color: white !important;
+  font-weight: bold;
+}
+.projectBtn{
+  border: 2px solid #2b2e4a;
+  background-color: white;
+  color: #2b2e4a;
+  font-weight: bold;
+}
+.projectBtn:hover{
+  background-color: #2b2e4a !important;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+.serviceList li{
+  list-style-type: circle;
+  font-family: 'Zilla Slab', serif;
+  color: #2b2e4a;
+}
+
+/* =========================
+        second Section 
+==========================*/
+
+.ml6 {
+  position: relative;
+  font-weight: 900;
+}
+
+.ml6 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.ml6 .letter {
+  display: inline-block;
+  line-height: 1em;
+  
+}
+/*  */
+.ml5 {
+  position: relative;
+  color: #2b2e4a;
+}
+
+.ml5 .text-wrapper1 {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+  line-height: 1em;
+}
+
+.ml5 .line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 3px;
+  width: 100%;
+  background-color: #2b2e4a;
+  transform-origin: 0.5 0;
+}
+
+
+.ml5 .letters1 {
+  display: inline-block;
+  opacity: 0;
+}
+/* =========================
+        Services Section 
+==========================*/
+
+.servicePage{
+  background-color: #cfd2ec !important;
+}
