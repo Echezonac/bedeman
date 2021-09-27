@@ -301,27 +301,28 @@
          <div class="row">
           
            <!-- item-col -->
-           <div class="col-12 p-3 d-flex align-items-center  portfolio-item">
-
-             <!-- item -->
+           <div class="col-12 p-3  portfolio-item " style="height: 500px !important;">
+            <div class="row">
+              <!-- item -->
              {% for project in archprojects %}
-             <a href="{{project.urlPath}}" target="_blank" class="d-block mx-auto my-2 p-1"> 
-              <div class="card" style="width: 20rem; height: 450px;">
-                <img src="{{project.image.url}}" class="card-img-top img-fluid" alt="Architecture" style="height: 300px;width: 300px;">
-                <div class="card-body">
-                  <h6 class="card-text text-center my-2" style="color: #2b2e4a;">
-                    {{project.title}} 
-                  </h6>
-                  <a href="{{project.urlPath}}" target="_blank" class="d-block mx-auto " >
-                    <i class="fa fa-eye " aria-hidden="true" style="color: #2b2e4a;"
-                    ></i>
-                  </a>
-                </div>
-              </div>
-             </a>
-             {% endfor %}
-             <!-- item end -->
-           </div>
+             <div class="col-lg-3 col-md-6 col-sm-12">
+               <div class="card mx-auto my-2 p-2" style="width: auto; height: 410px;">
+                 <img src="{{project.image.url}}" class="card-img-top img-fluid d-block mx-auto" alt="Architecture" style="height: 300px;width: 300px;">
+                 <div class="card-body">
+                   <h6 class="card-text text-center my-2" style="color: #2b2e4a;">
+                     {{project.title}} 
+                   </h6>
+                   <a href="{{project.urlPath}}" target="_blank" class="d-block mx-auto btn btn-outline-secondary px-3" style="width: fit-content;">
+                     View Details <i class="fa fa-eye " aria-hidden="true" style="color: #5660b8;"
+                     ></i>
+                   </a>
+                 </div>
+               </div>
+             </div>
+            {% endfor %}
+            <!-- item end -->
+            </div>
+          </div>
            <!-- item-col end -->
          </div>
        </div>
@@ -332,29 +333,30 @@
        <div class="col-12 bg-light portfolio-section" id="portfolio-tech">
         <div class="row">
          
-          <!-- item-col -->
-          <div class="col-12 p-3 d-flex align-items-center  portfolio-item">
-                <!-- item -->
+        <!-- item-col -->
+           <div class="col-12 p-3  portfolio-item " style="height: 500px !important;">
+            <div class="row">
+              <!-- item -->
              {% for project in techprojects %}
-             <a href="{{project.urlPath}}" target="_blank" class="d-block mx-auto my-2 p-1">
-              <div class="card" style="width: 25rem; height: 450px;">
-                <img src="{{project.image.url}}" class="card-img-top img-fluid" alt="Softwares" style="height: 300px;width: 400px;">
-                <div class="card-body">
-                  <h6 class="card-text text-center my-2" style="color: #2b2e4a;">
-                    {{project.title}} 
-                  </h6>
-                  <a href="{{project.urlPath}}" target="_blank" class="d-block mx-auto " >
-                    <i class="fa fa-eye " aria-hidden="true" style="color: #2b2e4a;"
-                    ></i>
-                  </a>
-                </div>
-              </div>
-             </a>
-             {% endfor %}
-             <!-- item end -->
-                 
+             <div class="col-lg-3 col-md-6 col-sm-12">
+               <div class="card mx-auto my-2 p-2" style="width: auto; height: 410px;">
+                 <img src="{{project.image.url}}" class="card-img-top img-fluid d-block mx-auto" alt="Architecture" style="height: 300px;width: 300px;">
+                 <div class="card-body">
+                   <h6 class="card-text text-center my-2" style="color: #2b2e4a;">
+                     {{project.title}} 
+                   </h6>
+                   <a href="{{project.urlPath}}" target="_blank" class="d-block mx-auto btn btn-outline-secondary px-3" style="width: fit-content;">
+                     View Details <i class="fa fa-eye " aria-hidden="true" style="color: #5660b8;"
+                     ></i>
+                   </a>
+                 </div>
+               </div>
+             </div>
+            {% endfor %}
+            <!-- item end -->
+            </div>
           </div>
-          <!-- item-col end -->
+           <!-- item-col end -->
         
         </div>
       </div>
@@ -366,27 +368,29 @@
         <div class="row">
          
           <!-- item-col -->
-          <div class="col-12 p-3 d-flex align-items-center  portfolio-item">
-               <!-- item -->
+          <div class="col-12 p-3  portfolio-item " style="height: 500px !important;">
+            <div class="row">
+              <!-- item -->
              {% for project in bisprojects %}
-             <a href="{{project.urlPath}}" target="_blank" class="d-block mx-auto my-2 p-1">
-              <div class="card" style="width: 20rem; height: 450px;">
-                <img src="{{project.image.url}}" class="card-img-top img-fluid" alt="Architecture" style="height: 300px;width: 300px;">
-                <div class="card-body">
-                  <h6 class="card-text text-center my-2" style="color: #2b2e4a;">
-                    {{project.title}} 
-                  </h6>
-                  <a href="{{project.urlPath}}" target="_blank" class="d-block mx-auto " >
-                    <i class="fa fa-eye " aria-hidden="true" style="color: #2b2e4a;"
-                    ></i>
-                  </a>
-                </div>
-              </div>
-             </a>
-             {% endfor %}
-             <!-- item end -->
+             <div class="col-lg-3 col-md-6 col-sm-12">
+               <div class="card mx-auto my-2 p-2" style="width: auto; height: 410px;">
+                 <img src="{{project.image.url}}" class="card-img-top img-fluid d-block mx-auto" alt="Architecture" style="height: 300px;width: 300px;">
+                 <div class="card-body">
+                   <h6 class="card-text text-center my-2" style="color: #2b2e4a;">
+                     {{project.title}} 
+                   </h6>
+                   <a href="{{project.urlPath}}" target="_blank" class="d-block mx-auto btn btn-outline-secondary px-3" style="width: fit-content;">
+                     View Details <i class="fa fa-eye " aria-hidden="true" style="color: #5660b8;"
+                     ></i>
+                   </a>
+                 </div>
+               </div>
+             </div>
+            {% endfor %}
+            <!-- item end -->
+            </div>
           </div>
-          <!-- item-col end -->
+           <!-- item-col end -->
         </div>
       </div>
       <!-- business work end -->
